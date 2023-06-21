@@ -7,25 +7,21 @@ function parseProducts(json) {
     // в объект с помощью функции JSON.parse(json)
     // и запишите в переменную data
     // Верните как результат функции свойство products объекта data
-function JSON.parse(json){
-    let data = {products};
-
+    let data = JSON.parse(json);
+    let products = data.products; 
     return products;
 }
      
-    
-}
+function renderProductsCards(json) {
+    clearPpoducts();
+    products = parseProducts(json);
+    length = products.length;
+    for (let i = 0; i < length; i += 1) {
+        addProduct(products[i]);
+}    
 
-function renderProductsCards(json){ 
-    console.log(clearPpoducts());
-    console.log(parseProducts(json));
-    let length = products.length;
-    let i=0;
-    while (i<=(length - 1){
-       console.log(i);
-       addPpoduct = [products(i)]
-    }
-}
+
+
 // Напишите функцию renderProductsCards(json)
 // Аргументом функции является JSON
 // Выполните функцию clearProducts - она уже написана в коде, просто вызовите ее, аргументы не требуются
